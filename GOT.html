@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Game of Thrones Quotes</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"/>
+  
+  <!-- Bootstrap & AOS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="GOT.css"/>
+
+</head>
+<body class="dark-mode">
+
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="./songs/Song of Ice and Fire.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="got-title">Game of Thrones Quotes</h2>
+      <div>
+        <button id="themeToggle" class="btn btn-sm btn-warning mr-2">🌗</button>
+        <button id="musicToggle" class="btn btn-sm btn-danger">🔊</button>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="quoteCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="6000">
+      <!-- Indicators -->
+      <ol class="carousel-indicators" id="carousel-indicators"></ol>
+
+      <div class="carousel-inner" id="carousel-inner"></div>
+
+      <a class="carousel-control-prev" href="#quoteCarousel" role="button" data-slide="prev">
+        <i class="fas fa-arrow-left"></i>
+      </a>
+      <a class="carousel-control-next" href="#quoteCarousel" role="button" data-slide="next">
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="GOT.js"></script>
+</body>
+</html>
