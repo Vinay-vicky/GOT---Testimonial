@@ -134,3 +134,21 @@ document.getElementById('musicToggle').addEventListener('click', () => {
   bgMusic.muted = !bgMusic.muted;
   document.getElementById('musicToggle').textContent = bgMusic.muted ? '🔇' : '🔊';
 });
+
+
+// Play only after user interaction
+let musicStarted = false;
+
+function tryPlayMusic() {
+  if (!musicStarted) {
+    document.getElementById('bg-music').play().then(() => {
+      musicStarted = true;
+    }).catch(err => {
+      console.log("Autoplay blocked, music will start on user interaction.");
+    });
+  }
+}
+
+window.addEventListener('click', tryPlayMusic);
+window.addEventListener('touchstart', tryPlayMusic);
+
